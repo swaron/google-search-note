@@ -1,0 +1,6 @@
+content   greennethelper                     content/
+skin         greennethelper  classic/1.0   skin/
+locale      greennethelper  en-US          locale/en-US/
+
+
+overlay chrome://browser/content/browser.xul  chrome://greennethelper/content/browserOverlay.xul

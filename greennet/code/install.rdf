@@ -1,32 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-  <Description about="urn:mozilla:install-manifest">
-    <em:id>Google.GreenNetHelper@apple.org</em:id>
-    <em:version>1.0</em:version>
-	<em:name>Green Net Helper</em:name>
-    <em:type>2</em:type>
-    <em:bootstrap>true</em:bootstrap>
-	<em:creator>Mo WenWo&lt;swaron@ymail.com&gt;</em:creator>
-    <em:unpack>false</em:unpack>
-	<em:description>绿色上网助手，引导用户不要利用搜索引擎特别是Google搜索不利身心健康的关键字和其他对社会有害的关键字。通过对危险网站给出提示来保护青少年少受外界的感染和误导,</em:description>
-	<em:homepageURL>http://code.orhub.undefined.com.cn/greennet</em:homepageURL>
-	<em:optionsURL>chrome://linktargetfinder/content/options.xul</em:optionsURL>
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>Google.GreenNetHelper@apple.org</em:id>
+		<em:version>1.0</em:version>
+		<em:name>谷歌绿色上网助手</em:name>
+		<em:description>绿色上网助手，引导用户不要利用搜索引擎特别是Google搜索不利身心健康的关键字和其他对社会有害的关键字。通过对危险网站给出提示来保护青少年少受外界的感染和误导。</em:description>
+		<em:creator>莫文水&lt;swaron@ymail.com&gt;</em:creator>
+		<em:homepageURL>http://code.or.hub.undefined.com.cn/greennet</em:homepageURL>
+		<em:optionsURL>chrome://linktargetfinder/content/options.xul</em:optionsURL>
+		<em:localized>
+			<Description>
+				<em:creator>Mo WenShui&lt;swaron@ymail.com&gt;</em:creator>
+				<em:locale>en</em:locale>
+				<em:name>Google Green Net Helper</em:name>
+				<em:description>Google Green Net Helper, Provide suggestion and notes when searching with google. protect user from malign and unhealthy content.</em:description>
+			</Description>
+		</em:localized>
+		
+		<!--This specifies that the add-on being installed is an extension. -->
+		<em:type>2</em:type>
+		
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>9.0</em:minVersion>
+				<em:maxVersion>12.0a1</em:maxVersion>
+			</Description>
+		</em:targetApplication>
 
-    <!-- Firefox -->
-    <em:targetApplication>
-      <Description>
-        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>9.0</em:minVersion>
-        <em:maxVersion>12.0a1</em:maxVersion>
-      </Description>
-    </em:targetApplication>
+		<!-- Front End MetaData -->
 
-    <!-- Front End MetaData -->
-    
-    <em:iconURL>chrome://sqlitemanager/skin/images/default32.png</em:iconURL>
-    <em:icon64URL/>
-    
-    
-    
-  </Description>
+		<em:iconURL>chrome://sqlitemanager/skin/images/default32.png</em:iconURL>
+		<em:icon64URL />
+
+
+
+	</Description>
 </RDF>
