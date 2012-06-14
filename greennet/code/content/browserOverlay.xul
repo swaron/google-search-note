@@ -2,43 +2,44 @@
 
 <?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
 <?xml-stylesheet type="text/css"
-	  href="chrome://xulschoolhello/skin/browserOverlay.css" ?>
+	  href="chrome://greennethelper/skin/browserOverlay.css" ?>
 
 <!DOCTYPE overlay SYSTEM
-	  "chrome://xulschoolhello/locale/browserOverlay.dtd">
+	  "chrome://greennethelper/locale/browserOverlay.dtd">
 
-<overlay id="xulschoolhello-browser-overlay"
+<overlay id="greennethelper-browser-overlay"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
 	<script type="application/x-javascript"
-		src="chrome://xulschoolhello/content/browserOverlay.js" />
+		src="chrome://greennethelper/content/browserOverlay.js" />
 
 	<stringbundleset id="stringbundleset">
-		<stringbundle id="xulschoolhello-string-bundle"
-			src="chrome://xulschoolhello/locale/browserOverlay.properties" />
+		<stringbundle id="greennethelper-string-bundle"
+			src="chrome://greennethelper/locale/browserOverlay.properties" />
 	</stringbundleset>
 
-	<menubar id="main-menubar">
-		<menu id="xulschoolhello-hello-menu" label="&xulschoolhello.hello.label;"
-			accesskey="&xulschoolhello.helloMenu.accesskey;" insertafter="helpMenu">
-			<menupopup>
-				<menuitem id="xulschoolhello-hello-menu-item"
-					label="&xulschoolhello.hello.label;"
-					accesskey="&xulschoolhello.helloItem.accesskey;"
-					oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" />
-			</menupopup>
-		</menu>
-	</menubar>
+	<menupopup id="menu_ToolsPopup">
+	  <menu id="greennethelper-hello-menu" label="&greennethelper.hello.label;"
+	    accesskey="&greennethelper.helloMenu.accesskey;"
+	    insertbefore="devToolsEndSeparator">
+	    <menupopup>
+	      <menuitem id="greennethelper-hello-menu-item"
+	        label="&greennethelper.hello.label;"
+	        accesskey="&greennethelper.helloItem.accesskey;"
+	        oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
+	    </menupopup>
+	  </menu>
+	</menupopup>
 
 	<vbox id="appmenuSecondaryPane">
-		<menu id="xulschoolhello-hello-menu-2" label="&xulschoolhello.hello.label;"
-			accesskey="&xulschoolhello.helloMenu.accesskey;"
+		<menu id="greennethelper-hello-menu-2" label="&greennethelper.hello.label;"
+			accesskey="&greennethelper.helloMenu.accesskey;"
 			insertafter="appmenu_addons">
 			<menupopup>
-				<menuitem id="xulschoolhello-hello-menu-item-2"
-					label="&xulschoolhello.hello.label;"
-					accesskey="&xulschoolhello.helloItem.accesskey;"
-					oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" />
+				<menuitem id="greennethelper-hello-menu-item-2"
+					label="&greennethelper.hello.label;"
+					accesskey="&greennethelper.helloItem.accesskey;"
+					oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
 			</menupopup>
 		</menu>
 	</vbox>

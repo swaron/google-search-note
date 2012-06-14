@@ -1,20 +1,20 @@
 /**
- * XULSchoolChrome namespace.
+ * GreenNetHelper namespace.
  */
-if ("undefined" == typeof(XULSchoolChrome)) {
-  var XULSchoolChrome = {};
+if ("undefined" == typeof(GreenNetHelper)) {
+  var GreenNetHelper = {};
 };
 
 /**
  * Controls the browser overlay for the Hello World extension.
  */
-XULSchoolChrome.BrowserOverlay = {
+GreenNetHelper.BrowserOverlay = {
   /**
    * Says 'Hello' to the user.
    */
   sayHello : function(aEvent) {
-    let stringBundle = document.getElementById("xulschoolhello-string-bundle");
-    let message = stringBundle.getString("xulschoolhello.greeting.label");
+    let stringBundle = document.getElementById("greennethelper-string-bundle");
+    let message = stringBundle.getString("greennethelper.greeting.label");
 
     window.alert(message);
   }
