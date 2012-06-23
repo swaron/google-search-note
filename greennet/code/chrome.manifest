@@ -1,5 +1,6 @@
 content   greennethelper                     content/
-skin         greennethelper  classic/1.0   skin/
+skin         greennethelper  classic/1.0   skin/unix
+skin         greennethelper  classic/1.0   skin/mac/ os=Darwin
 locale      greennethelper  en-US          locale/en-US/
 
 

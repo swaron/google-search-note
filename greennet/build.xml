@@ -1,0 +1,20 @@
+<project name="BuildXPI" default="package" basedir=".">
+	<description>
+        build xpi file
+    </description>
+	<!-- set global properties for this build -->
+	<property name="name" value="GreenNetHelper"/>
+	<property name="src" location="code" />
+	<property name="build" location="target" />
+
+	<target name="package" description="package the source ">
+		<mkdir dir="${build}" />
+		<zip destfile="${build}/${name}.xpi" basedir="${src}" encoding="UTF-8">
+		</zip>
+	</target>
+
+	<target name="clean" description="clean up">
+		<!-- Delete the ${build} directory trees -->
+		<delete dir="${build}" />
+	</target>
+</project>
