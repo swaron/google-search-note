@@ -2,19 +2,37 @@
 	<description>
         build xpi file
     </description>
+
 	<!-- set global properties for this build -->
-	<property name="name" value="GreenNetHelper"/>
-	<property name="src" location="code" />
-	<property name="build" location="target" />
+	<property name="extension_uuid" value="Google.GreenNetHelper@apple.org" />
+	<property name="extension_name" value="GreenNetHelper" />
+	<property name="src_dir" location="code" />
+	<property name="build_dir" location="target" />
+	<property name="profile_dir" value="abcd1234.dev" />
+	<condition property="install_loc" value="${user.home}/Library/Application Support/Firefox/Profiles/${profile_dir}/extensions/${extension_uuid}">
+		<os family="mac" />
+	</condition>
+	<condition property="install_loc" value="${user.home}\\Mozilla\\Firefox\\Profiles\\$(profile_dir)\\extensions">
+		<os family="windows" />
+	</condition>
+	<condition property="install_loc" value="~/.mozilla/firefox/$(profile_dir)/extensions/\{$(extension_uuid)\}">
+		<os family="unix" />
+	</condition>
 
 	<target name="package" description="package the source ">
-		<mkdir dir="${build}" />
-		<zip destfile="${build}/${name}.xpi" basedir="${src}" encoding="UTF-8">
+		<mkdir dir="${build_dir}" />
+		<zip destfile="${build_dir}/${extension_name}.xpi" basedir="${src_dir}" encoding="UTF-8">
 		</zip>
+		<echo>Build finished successfully.</echo>
+	</target>
+			
+	<target name="install" depends="package" description="install the xpi to firefox profile locaiton ">
+		<copydir dest="${install_loc}" src="${src_dir}"></copydir>
+		<echo>Installing in profile folder. Done!</echo>
 	</target>
 
 	<target name="clean" description="clean up">
 		<!-- Delete the ${build} directory trees -->
-		<delete dir="${build}" />
+		<delete dir="${build_dir}" includes="*" />
 	</target>
 </project>

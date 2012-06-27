@@ -19,16 +19,16 @@
 	</stringbundleset>
 
 	<menupopup id="menu_ToolsPopup">
-	  <menu id="greennethelper-hello-menu" label="&greennethelper.hello.label;"
-	    accesskey="&greennethelper.helloMenu.accesskey;"
-	    insertbefore="devToolsEndSeparator">
-	    <menupopup>
-	      <menuitem id="greennethelper-hello-menu-item"
-	        label="&greennethelper.hello.label;"
-	        accesskey="&greennethelper.helloItem.accesskey;"
-	        oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
-	    </menupopup>
-	  </menu>
+		<menu id="greennethelper-hello-menu" label="&greennethelper.hello.label;"
+			accesskey="&greennethelper.helloMenu.accesskey;"
+			insertbefore="devToolsEndSeparator">
+			<menupopup>
+				<menuitem id="greennethelper-hello-menu-item"
+					label="&greennethelper.hello.label;"
+					accesskey="&greennethelper.helloItem.accesskey;"
+					oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
+			</menupopup>
+		</menu>
 	</menupopup>
 
 	<vbox id="appmenuSecondaryPane">
@@ -43,4 +43,23 @@
 			</menupopup>
 		</menu>
 	</vbox>
+
+	<!-- refer to https://developer.mozilla.org/en/XUL/toolbox#m-expandToolbar, toolbox need to be put into a window element -->
+	<toolbox>
+		<menubar id="xulschoolhello-menubar">
+			<menu id="xulschoolhello-greeting-menu" label="&xulschoolhello.greeting.label;">
+				<menupopup>
+					<menuitem label="&xulschoolhello.greet.short.label;"
+						oncommand="XULSchoolChrome.GreetingDialog.greetingShort(event);" />
+					<menuitem label="&xulschoolhello.greet.medium.label;"
+						oncommand="XULSchoolChrome.GreetingDialog.greetingMedium(event);" />
+					<menuitem label="&xulschoolhello.greet.long.label;"
+						oncommand="XULSchoolChrome.GreetingDialog.greetingLong(event);" />
+					<menuseparator />
+					<menuitem label="&xulschoolhello.greet.custom.label;"
+						oncommand="XULSchoolChrome.GreetingDialog.greetingCustom(event);" />
+				</menupopup>
+			</menu>
+		</menubar>
+	</toolbox> Ï
 </overlay>

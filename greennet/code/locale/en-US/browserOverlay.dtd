@@ -1,3 +1,8 @@
 <!ENTITY greennethelper.hello.label            "Hello World!">
 <!ENTITY greennethelper.helloMenu.accesskey    "l">
 <!ENTITY greennethelper.helloItem.accesskey    "H">
+<!ENTITY xulschoolhello.greeting.label    "greeting">
+<!ENTITY xulschoolhello.greet.short.label    "short">
+<!ENTITY xulschoolhello.greet.long.label    "long">
+<!ENTITY xulschoolhello.greet.medium.label    "medium">
+<!ENTITY xulschoolhello.greet.custom.label    "custom">
