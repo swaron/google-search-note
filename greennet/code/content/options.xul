@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<?xml-stylesheet type="text/css"  href="chrome://browser/skin/preferences/preferences.css" ?>
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript"
+		src="chrome://greennethelper/content/common.js" />
+	<script type="application/x-javascript"
+		src="chrome://greennethelper/content/options.js" />
+
+	<prefpane id="paneGeneral" label="General" pane="paneGeneral">
+		<preferences>
+			<preference id="update-interval" name="extensions.greennethelper.updateInterval" type="int"/>
+		</preferences>
+		<groupbox>
+			<caption id="keyword-panel-title" label="关键字库，版本:"/>
+			<hbox width="100%" pack="start" align="center">
+				<button id="viewSiteBtn" label="查看网站列表" />
+				<button id="viewKeywordBtn" label="查看关键字列表" />
+				<button id="manageCustomBtn" label="管理自定义关键字" />
+			</hbox>
+		</groupbox>
+		<groupbox>
+			<caption label="关键字库更新设置"/>
+			<hbox width="100%" pack="start" align="center">
+				<radiogroup preference="update-interval">
+					 <radio value="1" label="每次启动时检测"/>
+					 <radio value="2" label="每天最多检测一次"/>
+					 <radio value="3" label="每周最多检测一次"/>
+					 <radio value="4" label="每月最多检测一次"/>
+					 <radio value="5" label="从不检测"/>
+				</radiogroup>
+			</hbox>
+		</groupbox>
+	</prefpane>
+</prefwindow>

@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 	<Description about="urn:mozilla:install-manifest">
-		<em:id>Google.GreenNetHelper@apple.org</em:id>
-		<em:version>1.0</em:version>
-		<em:name>谷歌绿色上网助手</em:name>
-		<em:description>引导用户不要利用搜索引擎特别是Google搜索不利身心健康的关键字和其他对社会有害的关键字。通过对危险网站给出提示来保护青少年少受外界的感染和误导。</em:description>
+		<em:id>Google.GreenNetHelper@ts.org</em:id>
+		<em:version>1.0-build1211</em:version>
+		<em:name>谷歌搜索助手</em:name>
+		<em:description>谷歌搜索助手，尽量保持谷歌的可用性，比如搜索有些特殊关键字会导致谷歌暂时不可用，插件将通过提前禁止这类搜索来防止谷歌不可用。</em:description>
+<!--		<em:description>引导用户不要利用搜索引擎特别是Google搜索不利身心健康的关键字和其他对社会有害的关键字。通过对危险网站给出提示来保护青少年少受外界的感染和误导。</em:description> -->
 		<em:developer>莫文水</em:developer>
 		<em:developer>T</em:developer>
 		<em:creator>T.S.</em:creator>
@@ -14,8 +15,8 @@
 			<Description>
 				<em:creator>TS</em:creator>
 				<em:locale>en</em:locale>
-				<em:name>Google Green Net Helper</em:name>
-				<em:description>Provide suggestion and notes when searching with google. Protect user from malign and unhealthy content.</em:description>
+				<em:name>Google China Search Helper</em:name>
+				<em:description>Provide search suggestion and restriction, to enhance accessiblity to google in china.</em:description>
 			</Description>
 		</em:localized>
 		
@@ -28,7 +29,7 @@
 				<!-- Beginning with Firefox 11, add-ons will default to compatible and Firefox will mostly ignore the version range. --> 
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>9.0</em:minVersion>
-				<em:maxVersion>12.0a1</em:maxVersion>
+				<em:maxVersion>14.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 
@@ -36,8 +37,5 @@
 
 		<em:iconURL>chrome://greennethelper/skin/images/default32.png</em:iconURL>
 		<em:icon64URL />
-
-
-
 	</Description>
 </RDF>

@@ -1,0 +1,15 @@
+/* The second and third selectors at the bottom are necessary to prevent
+   conflicts with installed themes. */
+toolbarbutton.xulschoolhello-toolbarbutton,
+window:not([active="true"]) toolbarbutton.xulschoolhello-toolbarbutton {
+  list-style-image: url("chrome://greennethelper-os/skin/toolbar-large.png");
+}
+
+#xulschoolhello-hello-world-button {
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+}
+
+toolbar[iconsize="small"] #xulschoolhello-hello-world-button {
+  list-style-image: url("chrome://greennethelper-os/skin/toolbar.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}

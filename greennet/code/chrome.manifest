@@ -1,7 +1,13 @@
 content   greennethelper                     content/
-skin         greennethelper  classic/1.0   skin/unix
-skin         greennethelper  classic/1.0   skin/mac/ os=Darwin
+skin         greennethelper     classic/1.0   skin/all
+skin         greennethelper-os  classic/1.0   skin/unix/
+skin         greennethelper-os  classic/1.0   skin/win/  os=WINNT
+skin         greennethelper-os  classic/1.0   skin/mac/  os=Darwin
+
 locale      greennethelper  en-US          locale/en-US/
 
 
 overlay chrome://browser/content/browser.xul  chrome://greennethelper/content/browserOverlay.xul
+style   chrome://global/content/customizeToolbar.xul chrome://greennethelper-os/skin/toolbar.css
+
+resource  greennethelper     modules/

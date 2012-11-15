@@ -6,3 +6,7 @@
 <!ENTITY xulschoolhello.greet.long.label    "long">
 <!ENTITY xulschoolhello.greet.medium.label    "medium">
 <!ENTITY xulschoolhello.greet.custom.label    "custom">
+<!ENTITY xulschoolhello.helloWorld.label    "hello">
+<!ENTITY xulschoolhello.helloWorld.tooltip    "hello world, tooltips.">
+<!ENTITY xulschoolhello.toolbarName.label    "my-toolbar">
+<!ENTITY xulschoolhello.toolbar.accesskey    "m">

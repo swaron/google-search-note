@@ -3,6 +3,8 @@
 <?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
 <?xml-stylesheet type="text/css"
 	  href="chrome://greennethelper/skin/browserOverlay.css" ?>
+<?xml-stylesheet type="text/css"
+	  href="chrome://greennethelper-os/skin/toolbar.css" ?>
 
 <!DOCTYPE overlay SYSTEM
 	  "chrome://greennethelper/locale/browserOverlay.dtd">
@@ -10,14 +12,31 @@
 <overlay id="greennethelper-browser-overlay"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<script type="application/x-javascript"
-		src="chrome://greennethelper/content/browserOverlay.js" />
+	<script type="application/x-javascript" src="chrome://greennethelper/content/common.js" />
+	<script type="application/x-javascript"	src="chrome://greennethelper/content/browserOverlay.js" />
+
+	<commandset>
+		<command id="cmd_open" oncommand="alert('Open!');"/>
+		<command id="xulschoolhello-hello-command" oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
+	</commandset>
 
 	<stringbundleset id="stringbundleset">
 		<stringbundle id="greennethelper-string-bundle"
 			src="chrome://greennethelper/locale/browserOverlay.properties" />
 	</stringbundleset>
 
+<!--
+	<menubar id="main-menubar">
+		<menu id="greennethelper-hello-menu" label="&greennethelper.hello.label;"
+			accesskey="&greennethelper.helloMenu.accesskey;" insertafter="helpMenu">
+			<menupopup>
+				<menuitem id="greennethelper-hello-menu-item"
+					label="&greennethelper.hello.label;"
+					accesskey="&greennethelper.helloItem.accesskey;"
+					command="xulschoolhello-hello-command"/>
+			</menupopup>
+		</menu>
+	</menubar>
 	<menupopup id="menu_ToolsPopup">
 		<menu id="greennethelper-hello-menu" label="&greennethelper.hello.label;"
 			accesskey="&greennethelper.helloMenu.accesskey;"
@@ -26,7 +45,7 @@
 				<menuitem id="greennethelper-hello-menu-item"
 					label="&greennethelper.hello.label;"
 					accesskey="&greennethelper.helloItem.accesskey;"
-					oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
+					command="xulschoolhello-hello-command"/>
 			</menupopup>
 		</menu>
 	</menupopup>
@@ -39,27 +58,17 @@
 				<menuitem id="greennethelper-hello-menu-item-2"
 					label="&greennethelper.hello.label;"
 					accesskey="&greennethelper.helloItem.accesskey;"
-					oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
+					command="xulschoolhello-hello-command"/>
 			</menupopup>
 		</menu>
 	</vbox>
-
-	<!-- refer to https://developer.mozilla.org/en/XUL/toolbox#m-expandToolbar, toolbox need to be put into a window element -->
-	<toolbox>
-		<menubar id="xulschoolhello-menubar">
-			<menu id="xulschoolhello-greeting-menu" label="&xulschoolhello.greeting.label;">
-				<menupopup>
-					<menuitem label="&xulschoolhello.greet.short.label;"
-						oncommand="XULSchoolChrome.GreetingDialog.greetingShort(event);" />
-					<menuitem label="&xulschoolhello.greet.medium.label;"
-						oncommand="XULSchoolChrome.GreetingDialog.greetingMedium(event);" />
-					<menuitem label="&xulschoolhello.greet.long.label;"
-						oncommand="XULSchoolChrome.GreetingDialog.greetingLong(event);" />
-					<menuseparator />
-					<menuitem label="&xulschoolhello.greet.custom.label;"
-						oncommand="XULSchoolChrome.GreetingDialog.greetingCustom(event);" />
-				</menupopup>
-			</menu>
-		</menubar>
-	</toolbox> Ï
+	
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton id="xulschoolhello-hello-world-button"
+			class="toolbarbutton-1 chromeclass-toolbar-additional xulschoolhello-toolbarbutton" 
+			label="&xulschoolhello.helloWorld.label;"
+			tooltiptext="&xulschoolhello.helloWorld.tooltip;"
+			oncommand="XULSchoolChrome.BrowserOverlay.doSomething(event);" />
+	</toolbarpalette>
+-->
 </overlay>

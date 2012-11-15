@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM
+	  "chrome://greennethelper/locale/browserOverlay.dtd">
+<window xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+	id="greennet-some-win"  orient="vertical" title="Options" width="500" height="300" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<script type="application/x-javascript"
+		src="chrome://greennethelper/content/someWindow.js" />
+	<hbox width="100%" pack="start" align="center">
+	  <button label="Create File" oncommand="GreenNetHelper.BrowserOverlay.createFile(event);" />
+	  <button label="Parrot" oncommand="XULSchoolChrome.GreetingDialog.greetingMedium();"/>
+	  <button label="Porcupine" oncommand="XULSchoolChrome.GreetingDialog.greetingLong();" />
+	</hbox>
+	<tabbox>
+		<tabs>
+			<tab label="main"></tab>
+			<tab label="advance"></tab>
+		</tabs>
+		<tabpanels>
+			<tabpanel>
+				main content
+			</tabpanel>
+			<tabpanel>
+				<description>advance content</description>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+
+<tree flex="1">
+  <treecols>
+    <treecol label="name"  primary="true" flex="1" />
+    <treecol label="greeting" flex="3" />
+  </treecols>
+  <treechildren>
+    <treeitem>
+      <treerow>
+        <treecell label="Peter" />
+        <treecell label="Hey, what's up?" />
+      </treerow>
+    </treeitem>
+    <!-- Notice that you need to specify the container attribute. -->
+    <treeitem container="true" open="true">
+      <treerow>
+        <treecell label="John"/>
+        <treecell label="Good evening, how are you doing?" />
+      </treerow>
+      <treechildren>
+        <treeitem>
+          <treerow>
+            <treecell label="John Jr."/>
+            <treecell label="Bah, bah!" />
+          </treerow>
+        </treeitem>
+        <treeitem>
+          <treerow>
+            <treecell label="John Jr.2"/>
+            <treecell label="Bah, bah!2" />
+          </treerow>
+        </treeitem>
+      </treechildren>
+    </treeitem>
+  </treechildren>
+</tree>
+
+
+</window>

@@ -4,7 +4,7 @@
     </description>
 
 	<!-- set global properties for this build -->
-	<property name="extension_uuid" value="Google.GreenNetHelper@apple.org" />
+	<property name="extension_uuid" value="Google.GreenNetHelper@ts.org" />
 	<property name="extension_name" value="GreenNetHelper" />
 	<property name="src_dir" location="code" />
 	<property name="build_dir" location="target" />

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<?xml-stylesheet type="text/css"  href="chrome://browser/skin/preferences/preferences.css" ?>
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" minwidth="300" minheight="200"
+	buttons="accept,cancel" ondialogaccept="return CustomDialog.onDialogAccept();"
+>
+	<script type="application/x-javascript" src="chrome://greennethelper/content/common.js" />
+	<script type="application/x-javascript" src="chrome://greennethelper/content/manageCustomKeywords.js" />
+	<description id="title">自定义关键字，每个关键字用逗号分开</description>
+	<textbox width="500" id="content" multiline="true"></textbox>
+	<textbox width="500" id="content2" multiline="true"></textbox>
+	<hbox pack="start" align="right">
+		<button id="saveButton" >Save</button>
+	</hbox>
+</dialog>
