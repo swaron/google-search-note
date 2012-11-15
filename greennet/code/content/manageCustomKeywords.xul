@@ -10,8 +10,4 @@
 	<script type="application/x-javascript" src="chrome://greennethelper/content/manageCustomKeywords.js" />
 	<description id="title">自定义关键字，每个关键字用逗号分开</description>
 	<textbox width="500" id="content" multiline="true"></textbox>
-	<textbox width="500" id="content2" multiline="true"></textbox>
-	<hbox pack="start" align="right">
-		<button id="saveButton" >Save</button>
-	</hbox>
 </dialog>
