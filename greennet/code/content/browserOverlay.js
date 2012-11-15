@@ -176,27 +176,26 @@ GreenNetHelper.HttpReqObserver = function() {
 						uri.scheme = 'https';
 					}
 				} else if (path.indexOf('/url?') == 0) {
-					var query = path.substr(5);
-					var url = getQueryVariable(query, 'url');
-					if (url != null && url.length > 3) {
-						var ioService = Components.classes["@mozilla.org/network/io-service;1"]
-								.getService(Components.interfaces.nsIIOService);
-						var newUri = ioService.newURI(url, "utf-8", null);
-						if (newUri.schemeIs(uri.scheme)) {
-							uri.spec = url;
-						} else {
-							uri.spec = url;
-							uri.scheme = newUri.scheme;
-						}
+					if (uri.schemeIs('http')) {
+						uri.scheme = 'https';
 					}
+//					var query = path.substr(5);
+//					var url = getQueryVariable(query, 'url');
+//					if (url != null && url.length > 3) {
+//						var ioService = Components.classes["@mozilla.org/network/io-service;1"]
+//								.getService(Components.interfaces.nsIIOService);
+//						var newUri = ioService.newURI(url, "utf-8", null);
+//						if (newUri.schemeIs(uri.scheme)) {
+//							uri.spec = url;
+//						} else {
+//							uri.spec = url;
+//							uri.scheme = newUri.scheme;
+//						}
+//					}
 				}else{
 					return;
 				}
-				var result = replaceChannel(httpChannel, uri);
-				if(!result){
-					log("Aborting redirection " + channel.name + ".");
-					//channel.cancel(Components.results.NS_ERROR_ABORT);
-				}
+				//var result = replaceChannel(httpChannel, uri);
 			}
 		},
 		register : function() {
