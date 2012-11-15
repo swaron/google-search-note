@@ -2,7 +2,7 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>Google.GreenNetHelper@ts.org</em:id>
-		<em:version>1.0-build1211</em:version>
+		<em:version>1.1.1-build1211</em:version>
 		<em:name>谷歌搜索助手</em:name>
 		<em:description>谷歌搜索助手，尽量保持谷歌的可用性，比如搜索有些特殊关键字会导致谷歌暂时不可用，插件将通过提前禁止这类搜索来防止谷歌不可用。</em:description>
 <!--		<em:description>引导用户不要利用搜索引擎特别是Google搜索不利身心健康的关键字和其他对社会有害的关键字。通过对危险网站给出提示来保护青少年少受外界的感染和误导。</em:description> -->
