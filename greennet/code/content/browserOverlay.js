@@ -68,7 +68,6 @@ Components.utils.import("resource://gre/modules/NetUtil.jsm");
 	            }
 	            var uri = httpChannel.URI;      	
 	            try {
-	            	alert("testing " + uri.spec);
 	                var resultUri = resolveUri(uri);
 	                if (resultUri != uri && resultUri.spec != uri.spec) {
 	                    if(resultUri == resolveUri(resultUri)){
@@ -82,7 +81,7 @@ Components.utils.import("resource://gre/modules/NetUtil.jsm");
 	                }
 	            }
 	            catch(ex) {
-	            	alert("error on redirect:" +aRequest.name + '\n'+ ex);
+//	            	alert("error on redirect:" +aRequest.name + '\n'+ ex);
 	            }
 	        }
 		},

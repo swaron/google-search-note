@@ -102,7 +102,7 @@ GreenNetHelper.apply(GreenNetHelper, {
 		var istream = converter.convertToInputStream(data);
 		NetUtil.asyncCopy(istream, ostream, function(status) {
 			if (!Components.isSuccessCode(status)) {
-				alert("falied to save json file.");
+				Components.utils.reportError("common.js:falied to save json file.");
 				// Handle error!
 				return;
 			}

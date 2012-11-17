@@ -29,7 +29,7 @@ window.addEventListener("load",function(){
 			});
 		});
 	}else{
-		alert("view site button not present yet.");
+		Components.utils.reportError("view site button not present yet.");
 	}
 	var viewKeyword = document.getElementById('viewKeywordBtn');
 	if(viewKeyword){
@@ -44,7 +44,7 @@ window.addEventListener("load",function(){
 			});
 		});
 	}else{
-		alert("view keyword button not present yet.");
+		Components.utils.reportError("view keyword button not present yet.");
 	}
 	var manageCustom = document.getElementById('manageCustomBtn');
 	if(manageCustom){
@@ -52,7 +52,7 @@ window.addEventListener("load",function(){
 			window.openDialog('chrome://greennethelper/content/manageCustomKeywords.xul',"view-list-window",'chrome,titlebar,toolbar,centerscreen,dialog=no');
 		});
 	}else{
-		alert("manage custom button not present yet.");
+		Components.utils.reportError("manage custom button not present yet.");
 	}
 	
 	
