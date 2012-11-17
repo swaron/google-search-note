@@ -22,6 +22,10 @@ window.addEventListener("load",function(){
 			GreenNetHelper.loadJsonFile("blacklist.json",function(content){
 				var title = "网站列表";
 				window.openDialog('chrome://greennethelper/content/contentList.xul',"view-list-window",'chrome,centerscreen,dialog=no',title,content.sites);
+			},{
+				lastUpdate : null,
+				sites : [],
+				keywords : []
 			});
 		});
 	}else{
@@ -33,6 +37,10 @@ window.addEventListener("load",function(){
 			GreenNetHelper.loadJsonFile("blacklist.json",function(content){
 				var title = "关键字列表";
 				window.openDialog('chrome://greennethelper/content/contentList.xul',"view-list-window",'chrome,titlebar,toolbar,centerscreen,dialog=yes',title,content.keywords,", ");
+			},{
+				lastUpdate : null,
+				sites : [],
+				keywords : []
 			});
 		});
 	}else{

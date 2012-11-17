@@ -3,7 +3,7 @@
 
 <?xml-stylesheet type="text/css"  href="chrome://browser/skin/preferences/preferences.css" ?>
 
-<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" minwidth="300" minheight="200"
+<dialog id="greennethelper-customkeyword-dialog" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" minwidth="300" minheight="200"
 	buttons="accept,cancel" ondialogaccept="return CustomDialog.onDialogAccept();"
 >
 	<script type="application/x-javascript" src="chrome://greennethelper/content/common.js" />

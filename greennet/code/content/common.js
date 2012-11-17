@@ -48,7 +48,7 @@ GreenNetHelper.apply(GreenNetHelper, {
 		}
 		return localDir;
 	},
-	loadJsonFile : function(filename, callback) {
+	loadJsonFile : function(filename, callback,defaultContent) {
 		if (typeof(callback) != 'function') {
 			return;
 		}
@@ -56,6 +56,7 @@ GreenNetHelper.apply(GreenNetHelper, {
 		var file = FileUtils.getFile("ProfD", ["GreenNetHelper", filename]);
 		if (!file.exists()) {
 			file.create(Components.interfaces.nsIFile.NORMAL_FILE_TYPE, FileUtils.PERMS_FILE);
+			callback(defaultContent);
 			return;
 		}
 		var channel = NetUtil.newChannel(file);
@@ -73,15 +74,17 @@ GreenNetHelper.apply(GreenNetHelper, {
 			}
 			// The file data is contained within inputStream.
 			// You can read it into a string with
-			var data = NetUtil.readInputStreamToString(inputStream, inputStream.available(), {
-				charset : 'utf-8'
-			});
 			try {
+				var data = NetUtil.readInputStreamToString(inputStream, inputStream.available(), {
+					charset : 'utf-8'
+				});
 				var content = JSON.parse(data);
 				// GreenNetHelper.apply(config,content);
 				callback(content);
 			} catch (e) {
 				Components.utils.reportError("common.js:error on read json data.");
+				GreenNetHelper.saveJsonFile(filename,defaultContent);
+				callback(defaultContent);
 			}
 		});
 	},

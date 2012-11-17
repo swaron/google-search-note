@@ -3,7 +3,7 @@
 
 <?xml-stylesheet type="text/css"  href="chrome://browser/skin/preferences/preferences.css" ?>
 
-<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefwindow id="greennethelper-preference-window" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="application/x-javascript"
 		src="chrome://greennethelper/content/common.js" />
 	<script type="application/x-javascript"

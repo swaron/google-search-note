@@ -17,7 +17,6 @@
 
 	<commandset>
 		<command id="cmd_open" oncommand="alert('Open!');"/>
-		<command id="xulschoolhello-hello-command" oncommand="GreenNetHelper.BrowserOverlay.sayHello(event);" />
 	</commandset>
 
 	<stringbundleset id="stringbundleset">

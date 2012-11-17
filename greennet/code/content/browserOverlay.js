@@ -102,12 +102,12 @@ Components.utils.import("resource://gre/modules/NetUtil.jsm");
 	            return this;
 	        }
 	        else {
-	            throw Components.results.NS_NOINTERFACE;
+	            return null;
 	        }
     	}
 	};
 	
-	Gnh.TabProgressListener = TabListener;
+	GreenNetHelper.TabProgressListener = TabListener;
 
 	GreenNetHelper.HttpReqObserver = function() {
 		this.register();
